@@ -1,5 +1,6 @@
 import "../styles/pages/Home.css";
 import nitsyImg from "../assets/Nitsy.jpg";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -24,8 +25,22 @@ function Home() {
             </p>
 
             <div className="hero-buttons">
-              <button className="btn-main">Voir mon portfolio</button>
-              <button className="btn-outline">Me contacter</button>
+
+              {/* PORTFOLIO */}
+              <Link to="/portfolio" className="btn-main">
+                Voir mon portfolio
+              </Link>
+
+              {/* DISCORD */}
+              <a
+                href="https://discord.gg/VepYaxpraG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline"
+              >
+                Me contacter
+              </a>
+
             </div>
 
           </div>
@@ -40,9 +55,8 @@ function Home() {
         </div>
       </div>
 
-      {/* LUMIÈRE BAS GAUCHE */}
+      {/* LUMIÈRE */}
       <div className="hero-light"></div>
-
     </section>
   );
 }
