@@ -111,3 +111,16 @@
 .dev strong {
   color: #3a7d44;
 }
+
+@media (max-width: 768px) {
+
+  .socials a {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .footer {
+    padding: 30px 10px;
+  }
+}

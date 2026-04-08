@@ -78,3 +78,14 @@
 .mentions a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+
+  .mentions {
+    padding: 100px 20px;
+  }
+
+  .mentions h1 {
+    font-size: 1.8rem;
+  }
+}

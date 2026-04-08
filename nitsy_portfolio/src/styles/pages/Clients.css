@@ -167,3 +167,14 @@
     height: 140px;
   }
 }
+
+@media (max-width: 768px) {
+
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-card img {
+    height: 140px;
+  }
+}

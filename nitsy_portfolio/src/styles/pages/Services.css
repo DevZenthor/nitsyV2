@@ -162,3 +162,14 @@
 .order-btn:hover {
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+}
