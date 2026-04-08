@@ -1,0 +1,164 @@
+/* ===== SECTION ===== */
+
+.services {
+  position: relative;
+  padding: 120px 0;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: linear-gradient(
+    120deg,
+    #f1faee 0%,
+    #e9f5ec 40%,
+    #d8f3dc 100%
+  );
+}
+
+/* TEXTURE */
+
+.services::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/leaf.png");
+  opacity: 0.05;
+}
+
+/* LUMIÈRES */
+
+.services::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #a3b18a 0%, transparent 70%);
+  top: -150px;
+  right: -150px;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+.services-light {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #d8f3dc 0%, transparent 70%);
+  bottom: -150px;
+  left: -150px;
+  filter: blur(100px);
+  opacity: 0.7;
+}
+
+/* CONTENT */
+
+.services .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* TITRES */
+
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #344e41;
+}
+
+.services p {
+  margin-bottom: 50px;
+  color: #588157;
+}
+
+/* GRID */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+/* CARD  */
+
+.service-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+
+  padding: 35px;
+  border-radius: 25px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* effet glow hover */
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4));
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* ICON */
+
+.icon {
+  font-size: 2rem;
+  color: #3a7d44;
+  margin-bottom: 15px;
+}
+
+/* TITRE */
+
+.service-card h3 {
+  font-size: 1.6rem;
+  color: #344e41;
+  margin-bottom: 10px;
+}
+
+/* PRIX */
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3a7d44;
+  margin-bottom: 15px;
+}
+
+/* DESC */
+
+.desc {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-bottom: 25px;
+}
+
+/* BOUTON */
+
+.order-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #3a7d44, #2d6a4f);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  transform: scale(1.05);
+}

@@ -1,4 +1,4 @@
-/* ===== HERO ===== */
+/*  HERO  */
 
 .hero {
   min-height: 100vh;
@@ -16,7 +16,7 @@
   );
 }
 
-/* ===== TEXTURE FEUILLES SUBTILE ===== */
+/*  TEXTURE FEUILLES SUBTILE  */
 
 .hero::before {
   content: "";
@@ -32,7 +32,7 @@
   z-index: 0;
 }
 
-/* ===== LUMIÈRE HAUT DROITE ===== */
+/*  LUMIÈRE HAUT DROITE  */
 
 .hero::after {
   content: "";
@@ -50,7 +50,7 @@
   z-index: 0;
 }
 
-/* ===== LUMIÈRE BAS GAUCHE ===== */
+/*  LUMIÈRE BAS GAUCHE  */
 
 .hero-light {
   position: absolute;
@@ -67,14 +67,14 @@
   z-index: 0;
 }
 
-/* ===== CONTENU ===== */
+/*  CONTENU  */
 
 .hero .container {
   position: relative;
   z-index: 2;
 }
 
-/* ===== TEXTE ===== */
+/*  TEXTE  */
 
 .hero-text h1 {
   font-size: 3.5rem;
@@ -93,7 +93,7 @@
   max-width: 500px;
 }
 
-/* ===== TAG ===== */
+/*  TAG  */
 
 .tag {
   display: inline-block;
@@ -105,7 +105,7 @@
   font-size: 0.9rem;
 }
 
-/* ===== BOUTONS ===== */
+/*  BOUTONS  */
 
 .hero-buttons {
   margin-top: 25px;
@@ -140,7 +140,7 @@
   color: white;
 }
 
-/* ===== IMAGE ===== */
+/*  IMAGE  */
 
 .image-wrapper {
   position: relative;
@@ -169,7 +169,7 @@
   z-index: 1;
 }
 
-/* ===== ANIMATION ===== */
+/*  ANIMATION  */
 
 @keyframes float {
   0% { transform: translateY(0px); }
@@ -177,7 +177,7 @@
   100% { transform: translateY(0px); }
 }
 
-/* ===== RESPONSIVE ===== */
+/*  RESPONSIVE  */
 
 @media (max-width: 992px) {
   .hero-text h1 {
