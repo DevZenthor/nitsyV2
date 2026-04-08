@@ -1,0 +1,195 @@
+/* ===== SECTION ===== */
+
+.portfolio {
+  position: relative;
+  padding: 120px 0;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: linear-gradient(
+    120deg,
+    #f1faee 0%,
+    #e9f5ec 40%,
+    #d8f3dc 100%
+  );
+}
+
+/* TEXTURE */
+
+.portfolio::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/leaf.png");
+  opacity: 0.05;
+}
+
+/* LUMIÈRES */
+
+.portfolio::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #a3b18a 0%, transparent 70%);
+  top: -150px;
+  right: -150px;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+.portfolio-light {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #d8f3dc 0%, transparent 70%);
+  bottom: -150px;
+  left: -150px;
+  filter: blur(100px);
+  opacity: 0.7;
+}
+
+/* CONTENT */
+
+.portfolio .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* TITRES */
+
+.portfolio h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #344e41;
+}
+
+.portfolio p {
+  margin-bottom: 40px;
+  color: #588157;
+}
+
+/* FILTRES */
+
+.filters {
+  margin-bottom: 40px;
+}
+
+.filters button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #d8f3dc;
+  color: #344e41;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background: #3a7d44;
+  color: white;
+}
+
+.filters .active {
+  background: #3a7d44;
+  color: white;
+}
+
+/* GRID */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background: white;
+  cursor: pointer;
+}
+
+/* IMAGE */
+
+.portfolio-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* LOGO FIX */
+
+.portfolio-card.logo img {
+  object-fit: contain;
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+/* OVERLAY */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(58, 125, 68, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.overlay span {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* HOVER */
+
+.portfolio-card:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

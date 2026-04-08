@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 // Pages
 import Home from "./pages/Home";
 // (tu ajouteras les autres après)
-// import Portfolio from "./pages/Portfolio";
+import Portfolio from "./pages/Portfolio";
 import Clients from "./pages/Clients";
 // import Services from "./pages/Services";
 // import Contact from "./pages/Contact";
@@ -21,7 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         {/* Routes futures */}
-        {/* <Route path="/portfolio" element={<Portfolio />} /> */}
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/clients" element={<Clients />} />
         {/* <Route path="/services" element={<Services />} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}
