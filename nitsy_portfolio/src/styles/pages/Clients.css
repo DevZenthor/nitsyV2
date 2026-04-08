@@ -5,7 +5,7 @@
   padding: 100px 0;
   overflow: hidden;
 
-  /* 🌿 même background que HOME */
+  /*  background  */
   background: linear-gradient(
     120deg,
     #f1faee 0%,
@@ -14,7 +14,7 @@
   );
 }
 
-/* ===== TEXTURE FEUILLES ===== */
+/*  TEXTURE FEUILLES  */
 
 .clients::before {
   content: "";
@@ -30,7 +30,7 @@
   z-index: 0;
 }
 
-/* ===== LUMIÈRE HAUT DROITE ===== */
+/*  LUMIÈRE HAUT DROITE  */
 
 .clients::after {
   content: "";
@@ -48,7 +48,7 @@
   z-index: 0;
 }
 
-/* ===== LUMIÈRE BAS GAUCHE ===== */
+/*  LUMIÈRE BAS GAUCHE  */
 
 .clients-light-left {
   position: absolute;
@@ -65,14 +65,14 @@
   z-index: 0;
 }
 
-/* ===== CONTENU AU-DESSUS ===== */
+/*  CONTENU AU-DESSUS  */
 
 .clients .container {
   position: relative;
   z-index: 2;
 }
 
-/* ===== TITRES ===== */
+/*  TITRES  */
 
 .clients h2 {
   font-size: 2.5rem;
@@ -86,7 +86,7 @@
   font-size: 1rem;
 }
 
-/* ===== GRID ===== */
+/*  GRID  */
 
 .clients-grid {
   display: grid;
@@ -94,7 +94,7 @@
   gap: 30px;
 }
 
-/* ===== CARD ===== */
+/*  CARD  */
 
 .client-card {
   background: rgba(255, 255, 255, 0.7);
@@ -114,7 +114,7 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== IMAGE ===== */
+/*  IMAGE  */
 
 .client-card img {
   width: 100%;
@@ -124,7 +124,7 @@
   margin-bottom: 15px;
 }
 
-/* ===== NOM ===== */
+/*  NOM  */
 
 .client-card h4 {
   font-size: 1.1rem;
@@ -133,7 +133,7 @@
   font-weight: 600;
 }
 
-/* ===== BOUTON TWITTER ===== */
+/*  BOUTON TWITTER  */
 
 .twitter-btn {
   display: inline-flex;
@@ -156,7 +156,7 @@
   transform: scale(1.15);
 }
 
-/* ===== RESPONSIVE ===== */
+/*  RESPONSIVE  */
 
 @media (max-width: 768px) {
   .clients h2 {
