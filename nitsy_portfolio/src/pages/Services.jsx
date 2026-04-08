@@ -6,19 +6,19 @@ function Services() {
     {
       icon: <FaImage />,
       title: "Miniatures",
-      price: "10€",
+      price: "entre 6€ et 8€",
       desc: "Miniatures YouTube percutantes et optimisées pour attirer l’attention et maximiser vos clics.",
     },
     {
       icon: <FaPaintBrush />,
       title: "Posters",
-      price: "15€",
+      price: "entre 5€ et 10€",
       desc: "Affiches modernes et visuellement impactantes pour vos projets, événements ou marques.",
     },
     {
       icon: <FaPenNib />,
       title: "Logos",
-      price: "20€",
+      price: "Entre 3€ et 6€",
       desc: "Logos uniques et professionnels pour créer une identité forte et mémorable.",
     },
   ];
@@ -44,7 +44,7 @@ function Services() {
               <p className="desc">{service.desc}</p>
 
               <a
-                href="https://discord.gg/TON-LIEN"
+                href="https://discord.gg/VepYaxpraG"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="order-btn"
