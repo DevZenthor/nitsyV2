@@ -7,6 +7,7 @@ import client3 from "../assets/jonax.jpg";
 import client4 from "../assets/wycker.jpg";
 import client5 from "../assets/Huna.jpg";
 import client6 from "../assets/EOZ.jpg";
+import client7 from "../assets/ascend.jpg";
 
 function Clients() {
   const clients = [
@@ -16,6 +17,7 @@ function Clients() {
     { img: client4, name: "Wycker", twitter: "https://x.com/WyckerTv" },
     { img: client5, name: "Huna Esport", twitter: "https://x.com/Huna_eSport" },
     { img: client6, name: "EOZ Esport", twitter: "https://x.com/EOZesport" },
+    { img: client7, name: "Ascend Esport", twitter: "https://x.com/xteamascend" },
   ];
 
   return (
