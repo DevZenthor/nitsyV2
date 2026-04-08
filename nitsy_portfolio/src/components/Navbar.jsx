@@ -37,7 +37,7 @@ function Navbar() {
 
             <li><Link className="nav-link" to="/">Accueil</Link></li>
             <li><Link className="nav-link" to="/portfolio">Portfolio</Link></li>
-            <li><Link className="nav-link" to="/about">À propos</Link></li>
+            <li><Link className="nav-link" to="/clients">Clients</Link></li>
             <li><Link className="nav-link" to="/services">Services</Link></li>
 
             <li className="ms-lg-3 mt-3 mt-lg-0">

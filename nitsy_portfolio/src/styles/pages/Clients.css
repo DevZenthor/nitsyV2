@@ -1,0 +1,140 @@
+/* ===== SECTION ===== */
+
+.clients {
+  position: relative;
+  padding: 100px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ===== TITRES ===== */
+
+.clients h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #344e41;
+}
+
+.clients p {
+  margin-bottom: 50px;
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+/* ===== GRID ===== */
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+
+.client-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.client-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== IMAGE (TAILLE FIXE) ===== */
+
+.client-card img {
+  width: 100%;
+  height: 160px; /* 🔥 uniformité */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* ===== NOM ===== */
+
+.client-card h4 {
+  font-size: 1.1rem;
+  color: #344e41;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* ===== BOUTON TWITTER ===== */
+
+.twitter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  background: #3a7d44;
+  color: white;
+  border-radius: 50%;
+
+  font-size: 18px;
+
+  transition: all 0.3s ease;
+}
+
+.twitter-btn:hover {
+  background: #2d6a4f;
+  transform: scale(1.15);
+}
+
+/* ===== LUMIÈRES (SUBTILES) ===== */
+
+.clients-light-right {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  background: radial-gradient(circle, #a3b18a 0%, transparent 70%);
+  top: -150px;
+  right: -150px;
+
+  filter: blur(120px);
+  opacity: 0.3;
+
+  z-index: 0;
+}
+
+.clients-light-left {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+
+  background: radial-gradient(circle, #d8f3dc 0%, transparent 70%);
+  bottom: -150px;
+  left: -150px;
+
+  filter: blur(140px);
+  opacity: 0.4;
+
+  z-index: 0;
+}
+
+/* ===== CONTENU AU-DESSUS ===== */
+
+.clients .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .clients h2 {
+    font-size: 2rem;
+  }
+
+  .client-card img {
+    height: 140px;
+  }
+}
