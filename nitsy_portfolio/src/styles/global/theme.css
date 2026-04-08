@@ -1,0 +1,12 @@
+:root {
+  --primary: #3a7d44;   /* vert nature */
+  --secondary: #a3b18a; /* vert doux */
+  --light: #f1faee;     /* fond clair */
+  --dark: #344e41;      /* vert foncé */
+}
+
+body {
+  background-color: var(--light);
+  color: var(--dark);
+  font-family: 'Poppins', sans-serif;
+}
