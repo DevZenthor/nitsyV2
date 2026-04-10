@@ -8,6 +8,8 @@ import client4 from "../assets/wycker.jpg";
 import client5 from "../assets/Huna.jpg";
 import client6 from "../assets/EOZ.jpg";
 import client7 from "../assets/ascend.jpg";
+import client8 from "../assets/lzs.jpg";
+import client9 from "../assets/sleaxyy.jpg";
 
 function Clients() {
   const clients = [
@@ -18,6 +20,8 @@ function Clients() {
     { img: client5, name: "Huna Esport", twitter: "https://x.com/Huna_eSport" },
     { img: client6, name: "EOZ Esport", twitter: "https://x.com/EOZesport" },
     { img: client7, name: "Ascend Esport", twitter: "https://x.com/xteamascend" },
+    { img: client8, name: "Team LZS", twitter: "https://x.com/lzs_team" },
+    { img: client9, name: "Sleaxyy", twitter: "https://x.com/sleaxyftn" },
   ];
 
   return (
