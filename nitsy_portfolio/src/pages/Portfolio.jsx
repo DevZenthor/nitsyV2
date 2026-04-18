@@ -14,6 +14,10 @@ import p8 from "../assets/poster6.png";
 import p9 from "../assets/poster7.png";
 import p10 from "../assets/poster9.jpeg";
 import p11 from "../assets/poster8.jpeg";
+import p12 from "../assets/Panda1.jpg";
+import p13 from "../assets/Panda2.jpg";
+import p14 from "../assets/Panda3.jpg";
+import p15 from "../assets/Panda4.jpg";
 
 function Portfolio() {
   const [filter, setFilter] = useState("all");
@@ -32,6 +36,10 @@ function Portfolio() {
     { img: p9, category: "poster" },
     { img: p10, category: "poster" },
     { img: p11, category: "poster" },
+    { img: p12, category: "poster" },
+    { img: p13, category: "poster" },
+    { img: p14, category: "poster" },
+    { img: p15, category: "poster" },
   ];
 
   const filteredProjects =
