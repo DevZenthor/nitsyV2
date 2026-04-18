@@ -17,7 +17,7 @@ import p11 from "../assets/poster8.jpeg";
 import p12 from "../assets/Panda1.jpg";
 import p13 from "../assets/Panda2.jpg";
 import p14 from "../assets/Panda3.jpg";
-import p15 from "../assets/Panda4.jpg";
+import p15 from "../assets/Panda4.png";
 
 function Portfolio() {
   const [filter, setFilter] = useState("all");
