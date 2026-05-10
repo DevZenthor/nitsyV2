@@ -1,11 +1,8 @@
-/*  SECTION  */
-
+/* ===== SECTION ===== */
 .portfolio {
   position: relative;
-  padding: 120px 0;
-  min-height: 100vh;
+  padding: 100px 0 130px;
   overflow: hidden;
-
   background: linear-gradient(
     120deg,
     #f1faee 0%,
@@ -15,7 +12,6 @@
 }
 
 /* TEXTURE */
-
 .portfolio::before {
   content: "";
   position: absolute;
@@ -23,188 +19,384 @@
   height: 100%;
   background-image: url("https://www.transparenttextures.com/patterns/leaf.png");
   opacity: 0.05;
+  top: 0; left: 0;
+  z-index: 0;
 }
 
 /* LUMIÈRES */
-
 .portfolio::after {
   content: "";
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 600px; height: 600px;
   background: radial-gradient(circle, #a3b18a 0%, transparent 70%);
-  top: -150px;
-  right: -150px;
+  top: -150px; right: -150px;
   filter: blur(80px);
   opacity: 0.6;
+  z-index: 0;
+}
+
+.portfolio-light-right {
+  position: absolute;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, #a3b18a 0%, transparent 70%);
+  bottom: 10%; right: -100px;
+  filter: blur(90px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.portfolio-light-left {
+  position: absolute;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #d8f3dc 0%, transparent 70%);
+  bottom: -150px; left: -150px;
+  filter: blur(100px);
+  opacity: 0.7;
+  z-index: 0;
 }
 
 .portfolio-light {
   position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, #d8f3dc 0%, transparent 70%);
-  bottom: -150px;
-  left: -150px;
-  filter: blur(100px);
-  opacity: 0.7;
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, #b7e4c7 0%, transparent 70%);
+  top: 30%; left: -80px;
+  filter: blur(80px);
+  opacity: 0.5;
+  z-index: 0;
 }
 
-/* CONTENT */
-
+/* CONTENU */
 .portfolio .container {
   position: relative;
   z-index: 2;
 }
 
 /* TITRES */
-
 .portfolio h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #344e41;
+  margin-bottom: 6px;
 }
 
-.portfolio p {
-  margin-bottom: 40px;
+.portfolio > .container > p {
   color: #588157;
+  font-size: 1rem;
+  margin-bottom: 36px;
 }
 
-/* FILTRES */
-
+/* ===== FILTRES ===== */
 .filters {
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
 }
 
 .filters button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  background: #d8f3dc;
-  color: #344e41;
-  transition: 0.3s;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(52, 78, 65, 0.15);
+  color: #588157;
+  padding: 9px 24px;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  backdrop-filter: blur(6px);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
 }
 
 .filters button:hover {
-  background: #3a7d44;
+  background: rgba(255,255,255,0.85);
+  color: #344e41;
+}
+
+.filters button.active {
+  background: linear-gradient(135deg, #3a7d44, #2d6a4f);
   color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(45, 106, 79, 0.3);
 }
 
-.filters .active {
-  background: #3a7d44;
-  color: white;
+/* ===== BURGER ICON ===== */
+.burger-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
-/* GRID */
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+.burger-icon span {
+  display: block;
+  width: 13px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
 }
 
-/* CARD */
-
-.portfolio-card {
+/* ===== WRAPPER FILTRE + DROPDOWN ===== */
+.filter-with-sub {
   position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  background: white;
-  cursor: pointer;
+  display: inline-block;
 }
 
-/* IMAGE */
-
-.portfolio-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: 0.4s;
-}
-
-/* LOGO FIX */
-
-.portfolio-card.logo img {
-  object-fit: contain;
-  padding: 20px;
-  background: #f8f9fa;
-}
-
-/* OVERLAY */
-
-.overlay {
+/* ===== DROPDOWN ===== */
+.sub-dropdown {
   position: absolute;
-  inset: 0;
-  background: rgba(58, 125, 68, 0.7);
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(52, 78, 65, 0.12);
+  border-radius: 14px;
+  padding: 6px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: 0.3s;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 100;
+  min-width: 170px;
+  box-shadow: 0 12px 40px rgba(52, 78, 65, 0.15);
+  animation: dropdownIn 0.16s ease;
 }
 
-.overlay span {
+@keyframes dropdownIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.sub-dropdown button {
+  background: transparent;
+  border: none;
+  color: #588157;
+  padding: 8px 14px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.sub-dropdown button:hover {
+  background: #f1faee;
+  color: #344e41;
+}
+
+.sub-dropdown button.active {
+  background: linear-gradient(135deg, #3a7d44, #2d6a4f);
   color: white;
-  font-size: 1.2rem;
   font-weight: 600;
 }
 
-/* HOVER */
+/* ===== BADGE SOUS-FILTRE ACTIF ===== */
+.active-sub-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: -24px auto 28px;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(52,78,65,0.12);
+  border-radius: 20px;
+  padding: 4px 12px 4px 14px;
+  font-size: 0.82rem;
+  color: #344e41;
+}
+
+.clear-sub {
+  background: none;
+  border: none;
+  color: #588157;
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.clear-sub:hover { color: #344e41; }
+
+/* ===== GRID — PAR DÉFAUT (tout mélangé) ===== */
+.portfolio-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* LOGOS SEULS */
+.portfolio-grid.grid-logo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.portfolio-grid.grid-logo .portfolio-card.logo {
+  width: 120px;
+  height: 120px;
+  flex: 0 0 120px;
+}
+
+/* POSTERS SEULS — portrait, 5 par ligne */
+.portfolio-grid.grid-poster {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* MINIATURES SEULES — 2 par ligne */
+.portfolio-grid.grid-miniature {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ===== CARD ===== */
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.9);
+  box-shadow: 0 4px 16px rgba(52,78,65,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 14px 36px rgba(52,78,65,0.14);
+}
+
+/* LOGO — carré */
+.portfolio-card.logo {
+  aspect-ratio: 1 / 1;
+}
+
+/* POSTER — portrait 9:16 */
+.portfolio-card.poster {
+  aspect-ratio: 9 / 16;
+}
+
+/* MINIATURE — paysage 16:9 */
+.portfolio-card.miniature {
+  aspect-ratio: 16 / 9;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.45s ease;
+}
 
 .portfolio-card:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+/* OVERLAY */
+.portfolio-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(52,78,65,0.7) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 14px;
 }
 
 .portfolio-card:hover .overlay {
   opacity: 1;
 }
 
-/* MODAL */
+.portfolio-card .overlay span {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.25);
+}
 
+/* ===== MODAL ===== */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(10px);
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .modal-img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 15px;
-  animation: zoomIn 0.3s ease;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  animation: zoomIn 0.22s ease;
 }
 
 @keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+  from { transform: scale(0.92); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .portfolio-grid.grid-poster { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .portfolio-grid         { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-grid.grid-poster { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-grid.grid-miniature { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
+  .portfolio h2 { font-size: 2rem; }
+  .portfolio-grid         { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .portfolio-grid.grid-poster { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-grid.grid-miniature { grid-template-columns: 1fr; }
+  .portfolio-grid.grid-logo { grid-template-columns: repeat(3, 1fr); }
+}
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 480px) {
+  .portfolio-grid         { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid.grid-poster { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid.grid-logo { grid-template-columns: repeat(2, 1fr); }
+}
 
-  .portfolio-card img {
-    height: 180px;
-  }
+/* ===== BLOCS PAR CATÉGORIE (vue Tous) ===== */
+.category-block {
+  margin-bottom: 48px;
+}
 
-  .filters button {
-    margin: 5px;
-  }
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #344e41;
+  text-align: left;
+  margin-bottom: 14px;
+  padding-left: 4px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.6;
 }
