@@ -12,18 +12,21 @@ import p6 from "../assets/miniature10.png";
 import p16 from "../assets/minia7.png";
 import p17 from "../assets/minia8.png";
 import p18 from "../assets/minia9.png";
+import a1 from "../assets/eos_ftn.png";
+import a2 from "../assets/perso.png";
+import a3 from "../assets/overwatch.jpg";
+import a4 from "../assets/M8_RL1.jpg";
+import a5 from "../assets/M8_RL2.png";
+import a6 from "../assets/affiche_odious.png";
 
-import p8 from "../assets/poster6.png";
+
+
 import p9 from "../assets/poster7.png";
 import p10 from "../assets/poster9.jpeg";
-import p11 from "../assets/poster8.jpeg";
-import p12 from "../assets/Panda1.jpg";
 import p13 from "../assets/Panda2.jpg";
-import p14 from "../assets/Panda3.jpg";
 import p15 from "../assets/Panda4.png";
 import p19 from "../assets/1.png";
 import p20 from "../assets/2.jpg";
-import p21 from "../assets/3.jpg";
 import p22 from "../assets/4.jpg";
 import p23 from "../assets/5.png";
 import p24 from "../assets/6.png";
@@ -45,32 +48,37 @@ function Portfolio() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const logos     = [{ img: p1, category: "logo", sub: null }];
+  const logos = [{ img: p1, category: "logo", sub: null }];
   const miniatures = [
-    { img: p2,  category: "miniature", sub: "gaming" },
-    { img: p3,  category: "miniature", sub: "irl" },
-    { img: p4,  category: "miniature", sub: "gaming" },
-    { img: p5,  category: "miniature", sub: "irl" },
-    { img: p6,  category: "miniature", sub: "gaming" },
+    { img: p2, category: "miniature", sub: "gaming" },
+    { img: p3, category: "miniature", sub: "irl" },
+    { img: p4, category: "miniature", sub: "gaming" },
+    { img: p5, category: "miniature", sub: "irl" },
+    { img: p6, category: "miniature", sub: "gaming" },
     { img: p16, category: "miniature", sub: "gaming" },
     { img: p17, category: "miniature", sub: "gaming" },
     { img: p18, category: "miniature", sub: "gaming" },
   ];
   const posters = [
-    { img: p8,  category: "poster", sub: "fortnite" },
-    { img: p9,  category: "poster", sub: "fortnite" },
+    { img: p9, category: "poster", sub: "fortnite" },
     { img: p10, category: "poster", sub: "fortnite" },
-    { img: p11, category: "poster", sub: "fortnite" },
-    { img: p12, category: "poster", sub: "fortnite" },
     { img: p13, category: "poster", sub: "fortnite" },
-    { img: p14, category: "poster", sub: "fortnite" },
     { img: p15, category: "poster", sub: "fortnite" },
     { img: p19, category: "poster", sub: "irl" },
     { img: p20, category: "poster", sub: "fortnite" },
-    { img: p21, category: "poster", sub: "fortnite" },
     { img: p22, category: "poster", sub: "fortnite" },
     { img: p23, category: "poster", sub: "fortnite" },
     { img: p24, category: "poster", sub: "creation" },
+    { img: a1, category: "poster", sub: "fortnite" },
+    { img: a2, category: "poster", sub: "creation" },
+    { img: a3, category: "poster", sub: "overwatch" },
+    { img: a4, category: "poster", sub: "rocket-league" },
+    { img: a5, category: "poster", sub: "rocket-league" },
+    { img: a6, category: "poster", sub: "fortnite" },
+
+
+
+
   ];
 
   const subCategories = {
